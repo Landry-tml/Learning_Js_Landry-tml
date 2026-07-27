@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <main>
+  <main class="card">
     <img src="./assets/images/avatar-jessica.jpeg" alt="Photo of Jessica Randall">
     <h1>Jessica Randall</h1>
     <p>London, United Kingdom</p>
@@ -63,5 +63,16 @@ body {
   background-color: var(--grey-900);
   color: var(--white);
 } 
+.card {
+  width: 100%;
+  max-width: 23.4375rem; /* ~375px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--grey-800);
+  border-radius: 1.25rem;
+  padding: 2.5rem 2.5rem 2.75rem;
+}
   </style>
 </head>
