@@ -13,13 +13,13 @@
     <p class="card__location">London, United Kingdom</p>
     <p class="card__bio">"Front-end developer and avid reader."</p>
 
-    <ul>
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">Frontend Mentor</a></li>
-      <li><a href="#">LinkedIn</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Instagram</a></li>
-    </ul>
+<ul class="card__links">
+  <li><a class="link" href="#">GitHub</a></li>
+  <li><a class="link" href="#">Frontend Mentor</a></li>
+  <li><a class="link" href="#">LinkedIn</a></li>
+  <li><a class="link" href="#">Twitter</a></li>
+  <li><a class="link" href="#">Instagram</a></li>
+</ul>
   </main>
 
 </body>
@@ -96,6 +96,25 @@ body {
 .card__bio {
   margin-top: 1.25rem;
   font-size: 0.875rem;
+}
+.card__links {
+  width: 100%;
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--grey-700);
+  color: var(--white);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
 }
   </style>
 </head>
