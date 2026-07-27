@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Social links profile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body, h1, p, ul { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    :root {
+      --green: hsl(75, 94%, 57%);
+      --white: hsl(0, 0%, 100%);
+      --grey-700: hsl(0, 0%, 20%);
+      --grey-800: hsl(0, 0%, 12%);
+      --grey-900: hsl(0, 0%, 8%);
+    }
+body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2.5rem 1.5rem;
+      background-color: var(--grey-900);
+      color: var(--white);
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 23.4375rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: var(--grey-800);
+      border-radius: 1.25rem;
+      padding: 2.5rem 2.5rem 2.75rem;
+    }
+
+    .card__avatar {
+      width: 6.25rem;
+      height: 6.25rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .card__name {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .card__location {
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--green);
+    }
+
+    .card__bio {
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    .card__links {
+      width: 100%;
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .link {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 0;
+      border-radius: 0.5rem;
+      background-color: var(--grey-700);
+      color: var(--white);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .link:hover,
+    .link:focus-visible {
+      background-color: var(--green);
+      color: var(--grey-900);
+    }
+
+    .link:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    .attribution { font-size: 0.6875rem; text-align: center; color: var(--white); }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
