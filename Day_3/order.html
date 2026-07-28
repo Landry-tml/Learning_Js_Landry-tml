@@ -114,6 +114,45 @@
   text-decoration: none;
 }
 
+.card__content {
+  padding-bottom: 2rem; /* now includes bottom space for the buttons */
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 0.75rem;
+}
+
+.btn--primary {
+  margin-top: 1.5rem;
+  padding: 0.9rem;
+  background-color: var(--purple-700);
+  color: var(--white);
+  font-size: 0.9375rem;
+  box-shadow: 0 1rem 1.5rem -0.75rem hsla(245, 75%, 52%, 0.5);
+}
+
+.btn--primary:hover {
+  background-color: hsl(245, 75%, 65%);
+}
+
+.btn--secondary {
+  margin-top: 1.25rem;
+  padding: 0;
+  background: none;
+  color: var(--blue-700);
+  font-size: 0.9375rem;
+}
+
+.btn--secondary:hover {
+  color: var(--blue-900);
+}
+
   </style>
 </head>
 <body>
@@ -135,8 +174,8 @@
       <a class="plan__channge" href="#">Change</a>
     </div>
 
-    <button>Proceed to Payment</button>
-    <button>Cancel Order</button>
+    <button class="btn btn--primary">Proceed to Payment</button>
+    <button class="btn btn--secondary">Cancel Order</button>
   </main>
 
 </body>
