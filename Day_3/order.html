@@ -58,6 +58,24 @@
         display: block;
         width: 100%;
     }
+
+    .card__content {
+  padding: 2rem 2.5rem 0;
+}
+
+.card__title {
+  font-size: 1.375rem;
+  font-weight: 900;
+  color: var(--blue-900);
+}
+
+.card__description {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--blue-700);
+}
+
   </style>
 </head>
 <body>
@@ -65,8 +83,10 @@
   <main class="card">
     <img class="card__hero" src="./assets/images/illustration-hero.svg" alt="">
 
-    <h1>Order Summary</h1>
-    <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+    <div class="card__content">
+    <h1 class="card__title">Order Summary</h1>
+    <p class="card__description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+    </div>
 
     <div>
       <img src="./assets/images/icon-music.svg" alt="">
