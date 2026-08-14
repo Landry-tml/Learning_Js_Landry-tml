@@ -16,7 +16,16 @@
   const taskList = document.getElementById("taskList");
 
   let tasks = [];
-  
+
+  function addTask() {
+  const text = taskInput.value.trim();
+  if (text === "") return;
+
+  tasks.push({ text: text, done: false });
+  taskInput.value = "";
+  renderTasks();
+}
+
 </script>
 <body>
 </body>
