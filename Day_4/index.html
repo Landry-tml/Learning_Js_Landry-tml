@@ -28,6 +28,21 @@
       li.classList.add("done");
     }
 
+    li.addEventListener("click", function () {
+  tasks[i].done = !tasks[i].done;
+  renderTasks();
+});
+
+const removeSpan = document.createElement("span");
+removeSpan.textContent = "✕";
+removeSpan.classList.add("removeBtn");
+removeSpan.addEventListener("click", function (event) {
+  event.stopPropagation();
+  tasks.splice(i, 1);
+  renderTasks();
+});
+
+li.appendChild(removeSpan);
     taskList.appendChild(li);
   }
 }
