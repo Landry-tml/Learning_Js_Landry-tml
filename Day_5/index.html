@@ -76,6 +76,11 @@ button:hover {
 const quoteText = document.getElementById("quoteText");
 const quoteAuthor = document.getElementById("quoteAuthor");
 const newQuoteBtn = document.getElementById("newQuoteBtn");
+
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
   </script>
 </body>
 </html>
