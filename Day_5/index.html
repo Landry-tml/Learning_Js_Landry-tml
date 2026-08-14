@@ -81,6 +81,14 @@ function getRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   return quotes[randomIndex];
 }
+
+function showNewQuote() {
+  const quote = getRandomQuote();
+  quoteText.textContent = quote.text;
+  quoteAuthor.textContent = "— " + quote.author;
+}
+
+newQuoteBtn.addEventListener("click", showNewQuote);
   </script>
 </body>
 </html>
