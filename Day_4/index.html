@@ -17,6 +17,20 @@
 
   let tasks = [];
 
+  function renderTasks() {
+  taskList.innerHTML = "";
+
+  for (let i = 0; i < tasks.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = tasks[i].text;
+
+    if (tasks[i].done) {
+      li.classList.add("done");
+    }
+
+    taskList.appendChild(li);
+  }
+}
   function addTask() {
   const text = taskInput.value.trim();
   if (text === "") return;
