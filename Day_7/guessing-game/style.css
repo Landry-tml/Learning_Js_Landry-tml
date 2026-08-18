@@ -21,3 +21,19 @@ body {
 .correct { color: var(--accent); font-weight: bold; }
 .error { color: var(--danger); }
 .lost { color: var(--danger); }
+
+console {
+  width: 100%;
+  max-width: 460px;
+  background: var(--panel);
+  border: 1px solid var(--accent-dim);
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  padding: 28px 28px 24px;
+}
+
+.console-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
