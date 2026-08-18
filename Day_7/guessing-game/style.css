@@ -10,6 +10,7 @@
 }
 
 * { box-sizing: border-box;}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -33,7 +34,7 @@ body {
 .error { color: var(--danger); }
 .lost { color: var(--danger); }
 
-console {
+.console {
   width: 100%;
   max-width: 460px;
   background: var(--panel);
