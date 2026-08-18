@@ -2,13 +2,24 @@
   --bg: #0d1117;
   --accent: #39ff88;
   --text: #d7ffe4;
+  --panel: #10151d;
+  --accent-dim: #1f6b40;
+  --muted: #6b8b7a;
+  --danger: #ff5c5c;
+  --warn: #ffcf5c;
 }
+
+* { box-sizing: border-box;}
 body {
   background: var(--bg);
   color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 24px;
 }
 
 .message {
