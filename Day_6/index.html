@@ -14,6 +14,7 @@
   <input type="number" id="guessInput" placeholder="Enter your guess">
   <button id="guessBtn">Guess</button>
   <p id="message"></p>
+
   <script>
   let secretNumber = Math.floor(Math.random() * 100) + 1;
   let attempts = 0;
@@ -25,7 +26,16 @@
   function checkGuess() {
   let userGuess = Number(guessInput.value);
   attempts = attempts + 1;
+
+  if (userGuess > secretNumber) {
+    message.textContent = "Too high! Try again.";
+  } else if (userGuess < secretNumber) {
+    message.textContent = "Too low! Try again.";
+  } else {
+    message.textContent = "Correct! You guessed it in " + attempts + " attempts.";
+  }
 }
+
 </script>
 </body>
 </html>
