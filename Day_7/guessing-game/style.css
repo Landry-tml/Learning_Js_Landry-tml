@@ -47,3 +47,17 @@ h1 {
   margin: 0 0 4px;
   color: var(--accent);
 }
+
+input[type="number"] {
+  flex: 1;
+  background: #06090d;
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 6px;
+  outline: none;
+}
+input[type="number"]:focus { border-color: var(--accent); }
+input:disabled { opacity: 0.4; }
