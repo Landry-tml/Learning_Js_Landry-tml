@@ -42,4 +42,19 @@ function checkGuess() {
     setMessage("Enter a whole number between 1 and 100.", "error");
     return;
   }
+
+    attempts++;
+  attemptsEl.textContent = `Attempts left: ${maxAttempts - attempts}`;
+
+  if (userGuess === secretNumber) {
+    setMessage(`Correct! The code was ${secretNumber}. Cracked in ${attempts} attempts.`, "correct");
+    addHistoryEntry(userGuess, "correct");
+    endGame(true);
+  } else if (userGuess > secretNumber) {
+    setMessage("Too high. Try a lower number.", "too-high");
+    addHistoryEntry(userGuess, "too high");
+  } else {
+    setMessage("Too low. Try a higher number.", "too-low");
+    addHistoryEntry(userGuess, "too low");
+  }
 }
