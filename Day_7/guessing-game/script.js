@@ -66,3 +66,8 @@ function checkGuess() {
   guessInput.value = "";
   guessInput.focus();
 }
+
+guessBtn.addEventListener("click", checkGuess);
+guessInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") checkGuess();
+});
