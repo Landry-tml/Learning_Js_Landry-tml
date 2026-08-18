@@ -10,3 +10,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.message {
+  min-height: 26px;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+.too-high { color: var(--warn); }
+.too-low { color: var(--warn); }
+.correct { color: var(--accent); font-weight: bold; }
+.error { color: var(--danger); }
+.lost { color: var(--danger); }
