@@ -88,3 +88,25 @@ button:disabled { background: var(--accent-dim); cursor: not-allowed; }
   margin-bottom: 14px;
 }
 
+.history {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px dashed var(--accent-dim);
+  padding-top: 8px;
+}
+.history li { padding: 2px 0; }
+.history li span { color: var(--accent); }
+
+.again {
+  width: 100%;
+  display: none;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.again:hover { background: rgba(57,255,136,0.1); }
