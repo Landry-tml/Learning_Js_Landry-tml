@@ -57,4 +57,12 @@ function checkGuess() {
     setMessage("Too low. Try a higher number.", "too-low");
     addHistoryEntry(userGuess, "too low");
   }
+
+    if (!hasWon && attempts >= maxAttempts) {
+    setMessage(`Out of attempts. The code was ${secretNumber}.`, "lost");
+    endGame(false);
+  }
+
+  guessInput.value = "";
+  guessInput.focus();
 }
