@@ -37,3 +37,13 @@ console {
   gap: 6px;
   margin-bottom: 18px;
 }
+
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-dim); }
+
+h1 {
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  color: var(--accent);
+}
