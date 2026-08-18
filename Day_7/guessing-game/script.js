@@ -16,3 +16,9 @@ function setMessage(text, className) {
   messageEl.textContent = text;
   messageEl.className = "message " + className;
 }
+
+function addHistoryEntry(guess, result) {
+  const li = document.createElement("li");
+  li.innerHTML = `<span>#${attempts}</span> guessed ${guess} — ${result}`;
+  historyEl.prepend(li);
+}
