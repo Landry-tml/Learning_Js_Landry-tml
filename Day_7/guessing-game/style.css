@@ -1,0 +1,12 @@
+:root {
+  --bg: #0d1117;
+  --accent: #39ff88;
+  --text: #d7ffe4;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
