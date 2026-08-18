@@ -22,3 +22,12 @@ function addHistoryEntry(guess, result) {
   li.innerHTML = `<span>#${attempts}</span> guessed ${guess} — ${result}`;
   historyEl.prepend(li);
 }
+
+function endGame(won) {
+  gameOver = true;
+  hasWon = won;
+  guessInput.disabled = true;
+  guessBtn.disabled = true;
+  statusEl.textContent = won ? "Status: Cracked" : "Status: Locked out";
+  againBtn.style.display = "block";
+}
