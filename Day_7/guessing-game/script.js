@@ -31,3 +31,15 @@ function endGame(won) {
   statusEl.textContent = won ? "Status: Cracked" : "Status: Locked out";
   againBtn.style.display = "block";
 }
+
+function checkGuess() {
+  if (gameOver) return;
+
+  const rawValue = guessInput.value;
+  const userGuess = Number(rawValue);
+
+  if (rawValue.trim() === "" || isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+    setMessage("Enter a whole number between 1 and 100.", "error");
+    return;
+  }
+}
