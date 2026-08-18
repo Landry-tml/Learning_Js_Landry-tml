@@ -11,3 +11,8 @@ const attemptsEl = document.getElementById("attemptsLeft");
 const statusEl = document.getElementById("status");
 const historyEl = document.getElementById("history");
 const againBtn = document.getElementById("againBtn");
+
+function setMessage(text, className) {
+  messageEl.textContent = text;
+  messageEl.className = "message " + className;
+}
