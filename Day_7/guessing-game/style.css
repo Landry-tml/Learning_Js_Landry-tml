@@ -77,3 +77,14 @@ button {
 }
 button:hover:not(:disabled) { background: #6bffb0; }
 button:disabled { background: var(--accent-dim); cursor: not-allowed; }
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
