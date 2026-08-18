@@ -71,3 +71,19 @@ guessBtn.addEventListener("click", checkGuess);
 guessInput.addEventListener("keydown", function (e) {
   if (e.key === "Enter") checkGuess();
 });
+
+againBtn.addEventListener("click", function () {
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+  attempts = 0;
+  hasWon = false;
+  gameOver = false;
+  guessInput.disabled = false;
+  guessBtn.disabled = false;
+  guessInput.value = "";
+  attemptsEl.textContent = `Attempts left: ${maxAttempts}`;
+  statusEl.textContent = "Status: Active";
+  setMessage("New code generated. Good luck.", "");
+  historyEl.innerHTML = "";
+  againBtn.style.display = "none";
+  guessInput.focus();
+});
