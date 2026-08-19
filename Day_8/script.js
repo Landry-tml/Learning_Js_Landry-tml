@@ -40,3 +40,23 @@ const dimensionInputs = document.getElementById("dimensionInputs");
 const calcBtn = document.getElementById("calcBtn");
 const resultBox = document.getElementById("result");
 const resultValue = document.getElementById("resultValue");
+
+function renderInputs(shape) {
+  dimensionInputs.innerHTML = "";
+  shapeConfig[shape].forEach(field => {
+    const label = document.createElement("label");
+    label.setAttribute("for", field.id);
+    label.textContent = field.label;
+
+    const input = document.createElement("input");
+    input.type = "number";
+    input.id = field.id;
+    input.min = "0";
+    input.step = "any";
+    input.placeholder = "e.g. 5";
+
+    dimensionInputs.appendChild(label);
+    dimensionInputs.appendChild(input);
+  });
+  resultBox.classList.remove("show");
+}
