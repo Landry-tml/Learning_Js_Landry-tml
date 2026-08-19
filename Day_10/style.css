@@ -32,6 +32,15 @@ body {
   box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
+.count {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
 .panel {
   background: var(--card);
   border-radius: 6px;
