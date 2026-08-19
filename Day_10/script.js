@@ -38,3 +38,16 @@ const addressBookManager = {
     return this.contacts.find(c => c.id === id);
   }
 };
+
+const form = document.getElementById("contactForm");
+const nameInput = document.getElementById("nameInput");
+const phoneInput = document.getElementById("phoneInput");
+const emailInput = document.getElementById("emailInput");
+const submitBtn = document.getElementById("submitBtn");
+const cancelEditBtn = document.getElementById("cancelEditBtn");
+const searchInput = document.getElementById("searchInput");
+const cardsList = document.getElementById("cardsList");
+const emptyMsg = document.getElementById("emptyMsg");
+const countLabel = document.getElementById("countLabel");
+
+let editingId = null; // tracks whether the form is adding or updating
