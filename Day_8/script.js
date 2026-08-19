@@ -10,3 +10,13 @@ function areaOfTriangle(base, height) {
 function areaOfSquare(side) {
   return side * side;
 }
+
+function calculateArea(shape, ...dimensions) {
+  switch (shape) {
+    case "circle": return areaOfCircle(dimensions[0]);
+    case "rectangle": return areaOfRectangle(dimensions[0], dimensions[1]);
+    case "triangle": return areaOfTriangle(dimensions[0], dimensions[1]);
+    case "square": return areaOfSquare(dimensions[0]);
+    default: return null;
+  }
+}
