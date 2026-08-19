@@ -1,0 +1,16 @@
+:root {
+  --blue: #0a2540;
+  --cyan: #7fd7ff;
+  --white: #eaf4ff;
+  --blue-light: #123a63;
+  --danger: #ff8a8a;
+  --grid-line: rgba(255,255,255,0.06);
+}
+
+body {
+  background-color: var(--blue);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
