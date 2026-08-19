@@ -157,3 +157,11 @@ button {
   font-size: 0.9rem;
 }
 .icon-btn:hover { color: var(--accent); }
+
+.empty-msg {
+  text-align: center;
+  color: var(--accent-soft);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  padding: 20px 0;
+}
