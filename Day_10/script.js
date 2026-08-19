@@ -120,3 +120,21 @@ function stopEdit() {
   submitBtn.textContent = "Add Contact";
   cancelEditBtn.style.display = "none";
 }
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = nameInput.value.trim();
+  const phone = phoneInput.value.trim();
+  const email = emailInput.value.trim();
+  if (name === "") {
+    alert("Name is required.");
+    return;
+  }
+  if (editingId !== null) {
+    addressBookManager.updateContact(editingId, { name, phone, email });
+  } else {
+    addressBookManager.addContact(name, phone, email);
+  }
+  stopEdit();
+  refresh();
+});
