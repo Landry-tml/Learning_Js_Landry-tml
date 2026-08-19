@@ -43,3 +43,34 @@ function removeItemByIndex(index) {
 function getTotal() {
   return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 }
+
+function renderCart() {
+  itemsList.innerHTML = "";
+  if (cart.length === 0) {
+    emptyMsg.style.display = "block";
+  } else {
+    emptyMsg.style.display = "none";
+    cart.forEach((item, index) => {
+      const li = document.createElement("li");
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "item-name";
+      nameSpan.textContent = item.name;
+      const qtySpan = document.createElement("span");
+      qtySpan.className = "item-qty";
+      qtySpan.textContent = `x${item.qty}`;
+      const priceSpan = document.createElement("span");
+      priceSpan.className = "item-price";
+      priceSpan.textContent = `$${(item.price * item.qty).toFixed(2)}`;
+      const delBtn = document.createElement("button");
+      delBtn.className = "del-btn";
+      delBtn.textContent = "✕";
+      delBtn.addEventListener("click", () => removeItemByIndex(index));
+      li.appendChild(nameSpan);
+      li.appendChild(qtySpan);
+      li.appendChild(priceSpan);
+      li.appendChild(delBtn);
+      itemsList.appendChild(li);
+    });
+  }
+  totalValue.textContent = `$${getTotal().toFixed(2)}`;
+}
