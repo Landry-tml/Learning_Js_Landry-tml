@@ -20,3 +20,10 @@ function calculateArea(shape, ...dimensions) {
     default: return null;
   }
 }
+
+function createFormatter(unit) {
+  return function (value) {
+    return `${value.toFixed(2)} ${unit}`;
+  };
+}
+const formatArea = createFormatter("units\u00b2");
