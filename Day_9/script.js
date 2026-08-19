@@ -88,3 +88,6 @@ addBtn.addEventListener("click", function () {
   priorityCheck.checked = false;
   itemNameInput.focus();
 });
+
+removeFirstBtn.addEventListener("click", removeFirstItem);
+removeLastBtn.addEventListener("click", removeLastItem);
