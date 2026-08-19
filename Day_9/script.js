@@ -55,7 +55,7 @@ function renderCart() {
       nameSpan.textContent = item.name;
       const qtySpan = document.createElement("span");
       qtySpan.className = "item-qty";
-      qtySpan.textContent = `xFCFA{item.qty}`;
+      qtySpan.textContent = `x${item.qty}`;
       const priceSpan = document.createElement("span");
       priceSpan.className = "item-price";
       priceSpan.textContent = `FCFA ${(item.price * item.qty).toFixed(2)}`;
