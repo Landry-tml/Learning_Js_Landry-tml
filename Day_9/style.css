@@ -56,8 +56,8 @@ h1 {
     gap:6px;
     margin-bottom: 8px;
 }
-.add-form input[type="text"] { flex: 2; }
-.add-form input[type="number"] { flex: 1; }
+.add-form input[type="text"] { flex: 2; min-width: 0;}
+.add-form input[type="number"] { flex: 1; min-width: 0;}
 
 input {
   background: transparent;
