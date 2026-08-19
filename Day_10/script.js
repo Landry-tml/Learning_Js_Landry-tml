@@ -121,6 +121,11 @@ function stopEdit() {
   cancelEditBtn.style.display = "none";
 }
 
+function saveContacts() {
+  localStorage.setItem("addressBookContacts", JSON.stringify(addressBookManager.contacts));
+  localStorage.setItem("addressBookNextId", String(addressBookManager.nextId));
+}
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const name = nameInput.value.trim();
