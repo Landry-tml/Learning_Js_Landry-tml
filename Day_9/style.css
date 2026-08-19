@@ -61,3 +61,19 @@ button {
 }
 button:hover { background: var(--accent); }
 button:disabled { background: var(--line); cursor: not-allowed; }
+
+.tool-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+.tool-row button {
+  flex: 1;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  font-size: 0.68rem;
+  padding: 6px;
+}
+.tool-row button:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
