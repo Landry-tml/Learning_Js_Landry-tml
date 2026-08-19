@@ -20,6 +20,16 @@ body {
   color: var(--ink);
 }
 
+.receipt {
+  width: 100%;
+  max-width: 380px;
+  background: var(--paper);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  padding: 26px 24px 30px;
+  position: relative;
+}
+
+
 .items {
   list-style: none;
   padding: 0;
