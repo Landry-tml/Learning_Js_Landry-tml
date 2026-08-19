@@ -75,4 +75,8 @@ function handleCalculate() {
     }
     values.push(num);
   }
+   const area = calculateArea(shape, ...values);
+  resultValue.textContent = formatArea(area);
+  resultBox.classList.remove("error");
+  resultBox.classList.add("show");
 }
