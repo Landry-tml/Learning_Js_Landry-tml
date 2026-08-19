@@ -85,3 +85,6 @@ function showError(msg) {
   resultValue.textContent = msg;
   resultBox.classList.add("error", "show");
 }
+
+shapeSelect.addEventListener("change", () => renderInputs(shapeSelect.value));
+calcBtn.addEventListener("click", handleCalculate);
