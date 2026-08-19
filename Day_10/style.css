@@ -40,7 +40,6 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
-
 .panel {
   background: var(--card);
   border-radius: 6px;
@@ -90,6 +89,19 @@ button {
 .btn-primary { background: var(--accent); color: #fff; flex: 1; }
 .btn-primary:hover { background: #8a3623; }
 .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--card-edge); display: none; }
+
+.search-input {
+  width: 100%;
+  border: none;
+  background: var(--card);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: var(--ink);
+  outline: none;
+  margin-bottom: 12px;
+}
 
 .cards {
   display: flex;
