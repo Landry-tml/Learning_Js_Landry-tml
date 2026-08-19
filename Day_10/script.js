@@ -51,3 +51,49 @@ const emptyMsg = document.getElementById("emptyMsg");
 const countLabel = document.getElementById("countLabel");
 
 let editingId = null; // tracks whether the form is adding or updating
+
+function renderContacts(list) {
+  cardsList.innerHTML = "";
+  if (list.length === 0) {
+    emptyMsg.style.display = "block";
+  } else {
+    emptyMsg.style.display = "none";
+    list.forEach(contact => {
+      const card = document.createElement("div");
+      card.className = "card";
+      const avatar = document.createElement("div");
+      avatar.className = "avatar";
+      avatar.textContent = contact.getInitials();
+      const info = document.createElement("div");
+      info.className = "card-info";
+      const nameEl = document.createElement("div");
+      nameEl.className = "name";
+      nameEl.textContent = contact.name;
+      const detailEl = document.createElement("div");
+      detailEl.className = "detail";
+      detailEl.textContent = [contact.phone, contact.email].filter(Boolean).join(" · ") || "No details";
+      info.appendChild(nameEl);
+      info.appendChild(detailEl);
+      const actions = document.createElement("div");
+      actions.className = "card-actions";
+      const editBtn = document.createElement("button");
+      editBtn.className = "icon-btn";
+      editBtn.textContent = "✎";
+      editBtn.addEventListener("click", () => startEdit(contact.id));
+      const delBtn = document.createElement("button");
+      delBtn.className = "icon-btn";
+      delBtn.textContent = "✕";
+      delBtn.addEventListener("click", () => {
+        addressBookManager.removeContact(contact.id);
+        refresh();
+      });
+      actions.appendChild(editBtn);
+      actions.appendChild(delBtn);
+      card.appendChild(avatar);
+      card.appendChild(info);
+      card.appendChild(actions);
+      cardsList.appendChild(card);
+    });
+  }
+  countLabel.textContent = `${addressBookManager.contacts.length} contact${addressBookManager.contacts.length === 1 ? "" : "s"}`;
+}
