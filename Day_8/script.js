@@ -34,3 +34,9 @@ const shapeConfig = {
   triangle: [{ id: "base", label: "Base" }, { id: "height", label: "Height" }],
   square: [{ id: "side", label: "Side length" }]
 };
+
+const shapeSelect = document.getElementById("shapeSelect");
+const dimensionInputs = document.getElementById("dimensionInputs");
+const calcBtn = document.getElementById("calcBtn");
+const resultBox = document.getElementById("result");
+const resultValue = document.getElementById("resultValue");
