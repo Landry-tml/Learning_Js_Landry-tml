@@ -55,10 +55,10 @@ function renderCart() {
       nameSpan.textContent = item.name;
       const qtySpan = document.createElement("span");
       qtySpan.className = "item-qty";
-      qtySpan.textContent = `x${item.qty}`;
+      qtySpan.textContent = `xFCFA{item.qty}`;
       const priceSpan = document.createElement("span");
       priceSpan.className = "item-price";
-      priceSpan.textContent = `$${(item.price * item.qty).toFixed(2)}`;
+      priceSpan.textContent = `FCFA{(item.price * item.qty).toFixed(2)}`;
       const delBtn = document.createElement("button");
       delBtn.className = "del-btn";
       delBtn.textContent = "✕";
@@ -70,7 +70,7 @@ function renderCart() {
       itemsList.appendChild(li);
     });
   }
-  totalValue.textContent = `$${getTotal().toFixed(2)}`;
+  totalValue.textContent = `FCFA${getTotal().toFixed(2)}`;
 }
 
 addBtn.addEventListener("click", function () {
