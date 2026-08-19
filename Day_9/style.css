@@ -29,6 +29,14 @@ body {
   position: relative;
 }
 
+.add-form {
+    display: flex;
+    gap:6px;
+    margin-bottom: 8px;
+}
+.add-form input[type="text"] { flex: 2; }
+.add-form input[type="number"] { flex: 1; }
+
 
 .items {
   list-style: none;
