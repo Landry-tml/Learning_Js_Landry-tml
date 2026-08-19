@@ -19,3 +19,31 @@ body {
   font-family: "Courier New", Courier, monospace;
   color: var(--ink);
 }
+
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  min-height: 30px;
+}
+.items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 0.85rem;
+  border-bottom: 1px dotted var(--line);
+  gap: 8px;
+}
+.items li .item-name { flex: 1; }
+.items li .item-qty { color: var(--muted); font-size: 0.75rem; }
+.items li .item-price { font-variant-numeric: tabular-nums; }
+.items li .del-btn {
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  padding: 0 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.items li .del-btn:hover { color: var(--accent); }
