@@ -52,6 +52,20 @@ const countLabel = document.getElementById("countLabel");
 
 let editingId = null; // tracks whether the form is adding or updating
 
+const savedContacts = JSON.parse(localStorage.getItem("addressBookContacts"));
+const savedNextId = localStorage.getItem("addressBookNextId");
+
+if (savedContacts && savedContacts.length > 0) {
+  // rebuild real Contact objects so getInitials() still works
+  addressBookManager.contacts = savedContacts.map(
+    c => new Contact(c.id, c.name, c.phone, c.email)
+  );
+  addressBookManager.nextId = savedNextId ? Number(savedNextId) : addressBookManager.contacts.length + 1;
+} else {
+  addressBookManager.addContact("Jane Smith", "555-9876", "jane@example.com");
+  addressBookManager.addContact("John Doe", "555-1234", "john@example.com");
+}
+
 function renderContacts(list) {
   cardsList.innerHTML = "";
   if (list.length === 0) {
