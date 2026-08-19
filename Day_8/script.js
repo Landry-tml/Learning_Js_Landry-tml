@@ -88,3 +88,5 @@ function showError(msg) {
 
 shapeSelect.addEventListener("change", () => renderInputs(shapeSelect.value));
 calcBtn.addEventListener("click", handleCalculate);
+
+renderInputs(shapeSelect.value);
