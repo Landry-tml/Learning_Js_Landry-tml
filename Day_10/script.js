@@ -97,3 +97,7 @@ function renderContacts(list) {
   }
   countLabel.textContent = `${addressBookManager.contacts.length} contact${addressBookManager.contacts.length === 1 ? "" : "s"}`;
 }
+
+function refresh() {
+  renderContacts(addressBookManager.findContact(searchInput.value));
+}
