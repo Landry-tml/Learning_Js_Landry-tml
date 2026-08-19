@@ -137,7 +137,7 @@ button:disabled { background: var(--line); cursor: not-allowed; }
 }
 .tool-row button:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
 
-empty-msg {
+.empty-msg {
   text-align: center;
   color: var(--muted);
   font-size: 0.8rem;
