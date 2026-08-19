@@ -138,3 +138,6 @@ form.addEventListener("submit", function (e) {
   stopEdit();
   refresh();
 });
+
+cancelEditBtn.addEventListener("click", stopEdit);
+searchInput.addEventListener("input", refresh);
