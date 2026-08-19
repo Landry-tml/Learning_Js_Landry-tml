@@ -11,6 +11,18 @@
 <div class="box">
   <h1>Address Book</h1>
   <p class="count" id="countLabel">0 contacts</p>
+
+  <div class="panel">
+  <form id="contactForm">
+    <input type="text" id="nameInput" placeholder="Full name" required>
+    <input type="tel" id="phoneInput" placeholder="Phone">
+    <input type="email" id="emailInput" placeholder="Email">
+    <div class="form-actions">
+      <button type="submit" class="btn-primary" id="submitBtn">Add Contact</button>
+      <button type="button" class="btn-secondary" id="cancelEditBtn">Cancel</button>
+    </div>
+  </form>
+</div>
 </div>
     <script src="script.js"></script>
 </body>
