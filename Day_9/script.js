@@ -39,3 +39,7 @@ function removeItemByIndex(index) {
   cart.splice(index, 1);
   renderCart();
 }
+
+function getTotal() {
+  return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+}
