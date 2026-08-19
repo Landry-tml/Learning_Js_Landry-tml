@@ -1,4 +1,4 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
 const itemNameInput = document.getElementById("itemName");
 const itemPriceInput = document.getElementById("itemPrice");
@@ -42,8 +42,14 @@ function getTotal() {
   return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 }
 
+function saveCart() {
+  localStorage.setItem("shoppingCart", JSON.stringify(cart));
+}
+
 function renderCart() {
   itemsList.innerHTML = "";
+   totalValue.textContent = `FCFA${getTotal().toFixed(2)}`;
+  saveCart(); 
   if (cart.length === 0) {
     emptyMsg.style.display = "block";
   } else {
