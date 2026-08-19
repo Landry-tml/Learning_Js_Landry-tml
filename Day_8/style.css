@@ -23,6 +23,15 @@ body {
   padding: 24px;
 }
 
+label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cyan);
+  margin-bottom: 6px;
+}
+
 .sheet {
   width: 100%;
   max-width: 480px;
