@@ -47,3 +47,17 @@ body {
   cursor: pointer;
 }
 .items li .del-btn:hover { color: var(--accent); }
+
+button {
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+button:hover { background: var(--accent); }
+button:disabled { background: var(--line); cursor: not-allowed; }
