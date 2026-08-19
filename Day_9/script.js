@@ -74,3 +74,17 @@ function renderCart() {
   }
   totalValue.textContent = `$${getTotal().toFixed(2)}`;
 }
+
+addBtn.addEventListener("click", function () {
+  const name = itemNameInput.value.trim();
+  const price = Number(itemPriceInput.value);
+  if (name === "" || isNaN(price) || price <= 0) {
+    alert("Enter a valid item name and price.");
+    return;
+  }
+  addItem(name, price, priorityCheck.checked);
+  itemNameInput.value = "";
+  itemPriceInput.value = "";
+  priorityCheck.checked = false;
+  itemNameInput.focus();
+});
