@@ -101,3 +101,22 @@ function renderContacts(list) {
 function refresh() {
   renderContacts(addressBookManager.findContact(searchInput.value));
 }
+
+function startEdit(id) {
+  const contact = addressBookManager.getById(id);
+  if (!contact) return;
+  editingId = id;
+  nameInput.value = contact.name;
+  phoneInput.value = contact.phone;
+  emailInput.value = contact.email;
+  submitBtn.textContent = "Save Changes";
+  cancelEditBtn.style.display = "inline-block";
+  nameInput.focus();
+}
+
+function stopEdit() {
+  editingId = null;
+  form.reset();
+  submitBtn.textContent = "Add Contact";
+  cancelEditBtn.style.display = "none";
+}
