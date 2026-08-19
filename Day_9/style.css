@@ -37,6 +37,14 @@ h1 {
   margin: 0 0 2px;
 }
 
+.store-sub {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
 .divider {
   border: none;
   border-top: 1px dashed var(--line);
@@ -51,6 +59,25 @@ h1 {
 .add-form input[type="text"] { flex: 2; }
 .add-form input[type="number"] { flex: 1; }
 
+input {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 7px 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--ink);
+  outline: none;
+}
+input:focus { border-color: var(--accent); }
+
+.options-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
 
 .items {
   list-style: none;
@@ -109,3 +136,20 @@ button:disabled { background: var(--line); cursor: not-allowed; }
   padding: 6px;
 }
 .tool-row button:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
+
+empty-msg {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 14px 0;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
