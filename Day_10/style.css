@@ -133,3 +133,20 @@ button {
   flex-shrink: 0;
   font-family: "Segoe UI", sans-serif;
 }
+
+.card-info { flex: 1; min-width: 0; }
+.card-info .name { font-weight: bold; font-size: 0.95rem; }
+.card-info .detail {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-actions {
+  display: flex;
+  gap: 6px;
+  font-family: "Segoe UI", sans-serif;
+}
