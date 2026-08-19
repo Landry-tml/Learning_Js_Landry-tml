@@ -80,3 +80,8 @@ function handleCalculate() {
   resultBox.classList.remove("error");
   resultBox.classList.add("show");
 }
+
+function showError(msg) {
+  resultValue.textContent = msg;
+  resultBox.classList.add("error", "show");
+}
