@@ -32,7 +32,7 @@ body {
   box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
-orm {
+form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
