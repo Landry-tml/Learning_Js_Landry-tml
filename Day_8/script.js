@@ -27,3 +27,10 @@ function createFormatter(unit) {
   };
 }
 const formatArea = createFormatter("units\u00b2");
+
+const shapeConfig = {
+  circle: [{ id: "radius", label: "Radius" }],
+  rectangle: [{ id: "width", label: "Width" }, { id: "height", label: "Height" }],
+  triangle: [{ id: "base", label: "Base" }, { id: "height", label: "Height" }],
+  square: [{ id: "side", label: "Side length" }]
+};
