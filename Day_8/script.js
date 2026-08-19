@@ -60,3 +60,19 @@ function renderInputs(shape) {
   });
   resultBox.classList.remove("show");
 }
+
+function handleCalculate() {
+  const shape = shapeSelect.value;
+  const fields = shapeConfig[shape];
+  const values = [];
+
+  for (const field of fields) {
+    const raw = document.getElementById(field.id).value;
+    const num = Number(raw);
+    if (raw.trim() === "" || isNaN(num) || num <= 0) {
+      showError(`Enter a valid positive number for ${field.label.toLowerCase()}.`);
+      return;
+    }
+    values.push(num);
+  }
+}
