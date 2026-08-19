@@ -66,6 +66,7 @@ if (savedContacts && savedContacts.length > 0) {
   addressBookManager.addContact("John Doe", "555-1234", "john@example.com");
 }
 
+
 function renderContacts(list) {
   cardsList.innerHTML = "";
   if (list.length === 0) {
@@ -110,6 +111,7 @@ function renderContacts(list) {
     });
   }
   countLabel.textContent = `${addressBookManager.contacts.length} contact${addressBookManager.contacts.length === 1 ? "" : "s"}`;
+  saveContacts(); // add this line at the end
 }
 
 function refresh() {
