@@ -23,6 +23,17 @@ body {
   padding: 24px;
 }
 
+.sheet {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(10, 37, 64, 0.85);
+  border: 1px solid var(--cyan);
+  outline: 6px solid rgba(127,215,255,0.08);
+  outline-offset: 6px;
+  border-radius: 4px;
+  padding: 30px;
+}
+
 select, input[type="number"] {
   width: 100%;
   background: rgba(255,255,255,0.05);
