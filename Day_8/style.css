@@ -50,3 +50,28 @@ button {
   font-size: 0.85rem;
 }
 button:hover { background: #a7e5ff; }
+
+.result {
+  margin-top: 20px;
+  border: 1px dashed var(--cyan);
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.result.show { opacity: 1; transform: translateY(0); }
+
+.result .label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 4px;
+}
+.result .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.result.error .value { color: var(--danger); font-size: 1rem; font-weight: 400; }
