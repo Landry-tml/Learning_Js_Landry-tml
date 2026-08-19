@@ -91,3 +91,5 @@ addBtn.addEventListener("click", function () {
 
 removeFirstBtn.addEventListener("click", removeFirstItem);
 removeLastBtn.addEventListener("click", removeLastItem);
+
+renderCart();
