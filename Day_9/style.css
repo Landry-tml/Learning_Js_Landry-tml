@@ -1,0 +1,21 @@
+:root {
+  --paper: #faf6ec;
+  --ink: #2b2b2b;
+  --muted: #8a8375;
+  --line: #cfc8b4;
+  --accent: #b3421f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #e7e2d3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--ink);
+}
