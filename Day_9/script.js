@@ -14,7 +14,7 @@ const totalValue = document.getElementById("totalValue");
 
 function addItem(name, price, priority) {
   const existingIndex = cart.findIndex(item => item.name.toLowerCase() === name.toLowerCase());
-  
+
   if (existingIndex !== -1) {
     cart[existingIndex].qty += 1;
   } else if (priority) {
@@ -22,5 +22,20 @@ function addItem(name, price, priority) {
   } else {
     cart.push({ name, price, qty: 1 });
   }
+  renderCart();
+}
+
+function removeFirstItem() {
+  if (cart.length === 0) return;
+  cart.shift();
+  renderCart();
+}
+function removeLastItem() {
+  if (cart.length === 0) return;
+  cart.pop();
+  renderCart();
+}
+function removeItemByIndex(index) {
+  cart.splice(index, 1);
   renderCart();
 }
