@@ -112,3 +112,19 @@ body {
   gap: clamp(0.4rem, 2vw, 1rem);
   flex-wrap: nowrap;
 }
+
+.time-display {
+  font-size: clamp(2.5rem, 12vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--text-main);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 25px var(--accent-glow);
+}
+ 
+.ampm-display {
+  font-size: clamp(0.9rem, 3vw, 1.3rem);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
