@@ -128,3 +128,15 @@ body {
   color: var(--accent);
   letter-spacing: 1px;
 }
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.9rem;
+  }
+  .clock-card {
+    border-radius: 18px;
+  }
+}
+ 
