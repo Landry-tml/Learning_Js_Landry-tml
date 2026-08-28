@@ -32,7 +32,7 @@ const dateOptions = { weekday: 'short', month: 'short', day: '2-digit' };
   let hours = now.getHours();
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
-}
+
 
 const ampm = hours >= 12 ? 'PM' : 'AM';
  
@@ -40,4 +40,7 @@ hours = String(hours).padStart(2, '0');
 minutes = String(minutes).padStart(2, '0');
 seconds = String(seconds).padStart(2, '0');
  
+timeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+  ampmDisplay.textContent = ampm;
+}
 
