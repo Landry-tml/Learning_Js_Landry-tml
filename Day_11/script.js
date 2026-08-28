@@ -20,3 +20,5 @@ const themeText = document.getElementById('themeText');
 const dateDisplay = document.getElementById('date');
 const timeDisplay = document.getElementById('time');
 const ampmDisplay = document.getElementById('ampm');
+
+themeIcon.innerHTML = sunIcon;
