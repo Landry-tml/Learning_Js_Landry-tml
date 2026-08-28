@@ -44,3 +44,19 @@ timeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
   ampmDisplay.textContent = ampm;
 }
 
+toggleBtn.addEventListener('click', () => {
+  const isLight = document.body.getAttribute('data-theme') === 'light';
+ 
+  if (isLight) {
+    // Currently light -> switch back to dark
+    document.body.removeAttribute('data-theme');
+    themeIcon.innerHTML = sunIcon;
+    themeText.textContent = 'Light';
+  } else {
+    // Currently dark -> switch to light
+    document.body.setAttribute('data-theme', 'light');
+    themeIcon.innerHTML = moonIcon;
+    themeText.textContent = 'Dark';
+  }
+});
+ 
