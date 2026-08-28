@@ -34,3 +34,6 @@ const dateOptions = { weekday: 'short', month: 'short', day: '2-digit' };
   let seconds = now.getSeconds();
 }
 
+const ampm = hours >= 12 ? 'PM' : 'AM';
+ 
+
