@@ -25,4 +25,9 @@ themeIcon.innerHTML = sunIcon;
 
 function updateClock() {
   const now = new Date();
+
+const dateOptions = { weekday: 'short', month: 'short', day: '2-digit' };
+  dateDisplay.textContent = now.toLocaleDateString('en-US', dateOptions);
+ 
 }
+
