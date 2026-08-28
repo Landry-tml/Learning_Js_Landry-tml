@@ -52,3 +52,31 @@ body {
 }
 .circle-1 { top: 10%; left: 10%; }
 .circle-2 { bottom: 10%; right: 10%; }
+
+.theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+.theme-toggle:hover { transform: translateY(-2px); }
+ 
+.icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
