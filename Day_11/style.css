@@ -95,3 +95,12 @@ body {
   width: 100%;
   max-width: 550px;
 }
+
+.date-display {
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-sub);
+  margin-bottom: 0.75rem;
+}
