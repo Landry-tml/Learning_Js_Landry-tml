@@ -29,5 +29,8 @@ function updateClock() {
 const dateOptions = { weekday: 'short', month: 'short', day: '2-digit' };
   dateDisplay.textContent = now.toLocaleDateString('en-US', dateOptions);
  
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
 }
 
