@@ -22,3 +22,7 @@ const timeDisplay = document.getElementById('time');
 const ampmDisplay = document.getElementById('ampm');
 
 themeIcon.innerHTML = sunIcon;
+
+function updateClock() {
+  const now = new Date();
+}
