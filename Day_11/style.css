@@ -39,3 +39,16 @@ body {
   overflow: hidden;
   padding: 1rem;
 }
+
+.glow-circle {
+  position: absolute;
+  width: clamp(180px, 30vw, 320px);
+  height: clamp(180px, 30vw, 320px);
+  background: var(--accent);
+  filter: blur(100px);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+.circle-1 { top: 10%; left: 10%; }
+.circle-2 { bottom: 10%; right: 10%; }
