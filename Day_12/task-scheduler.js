@@ -89,6 +89,14 @@ function runPromiseDemo() {
   }
 }
 
+function eventLoopOrderDemo() {
+  console.log("\n=== BONUS: Event Loop Ordering ===");
+  console.log("1. Synchronous line");
+  setTimeout(() => console.log("4. setTimeout (macrotask)"), 0);
+  Promise.resolve().then(() => console.log("3. Promise.then (microtask)"));
+  console.log("2. Another synchronous line");
+}
+
 (async function main() {
   runSynchronousDemo();
   runCallbackDemo();
