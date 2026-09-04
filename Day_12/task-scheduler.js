@@ -101,5 +101,8 @@ function eventLoopOrderDemo() {
   runSynchronousDemo();
   eventLoopOrderDemo();
   runCallbackDemo();
-  runPromiseDemo;
+  runPromiseDemo();
+  await new Promise((r) => setTimeout(r, 2500));
+
+  await runAsyncAwaitDemo();
 })();
