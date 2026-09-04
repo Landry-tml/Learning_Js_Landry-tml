@@ -28,6 +28,19 @@ function runCallbackDemo() {
   });
 }
 
+function scheduleTaskPromise(taskName, delayMs, shouldFail = false) {
+  return new Promise((resolve, reject) => {
+    console.log(`[PROMISE] Scheduling "${taskName}" to run in ${delayMs}ms`);
+    setTimeout(() => {
+      if (shouldFail) {
+        reject(new Error(`${taskName} failed to complete`));
+      } else {
+        resolve(`${taskName} finished`);
+      }
+    }, delayMs);
+  });
+}
+
 (async function main() {
   runSynchronousDemo();
   runCallbackDemo();
