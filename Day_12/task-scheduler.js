@@ -41,6 +41,18 @@ function scheduleTaskPromise(taskName, delayMs, shouldFail = false) {
   });
 }
 
+function runPromiseDemo() {
+  console.log("\n=== STEP 3: Promise-based Scheduling ===");
+
+  scheduleTaskPromise("Compile assets", 700)
+    .then((result) => {
+      console.log(`[PROMISE] ${result}`);
+      return scheduleTaskPromise("Deploy to staging", 400);
+    })
+    .then((result) => console.log(`[PROMISE] ${result}`))
+    .catch((err) => console.error(`[PROMISE] Error: ${err.message}`));
+}
+
 (async function main() {
   runSynchronousDemo();
   runCallbackDemo();
