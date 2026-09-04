@@ -6,3 +6,7 @@ function runSynchronousDemo() {
     console.log(`[SYNC] Task ${i + 1} done: ${task}`);
   });
 }
+
+(async function main() {
+  runSynchronousDemo();
+})();
