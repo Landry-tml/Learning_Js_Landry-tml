@@ -99,6 +99,7 @@ function eventLoopOrderDemo() {
 
 (async function main() {
   runSynchronousDemo();
+  eventLoopOrderDemo();
   runCallbackDemo();
   runPromiseDemo;
 })();
