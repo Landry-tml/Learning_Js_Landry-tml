@@ -64,6 +64,31 @@ function runPromiseDemo() {
     })
     .catch((err) => console.error(`[PROMISE] Error: ${err.message}`));
 
+    async function runAsyncAwaitDemo() {
+  console.log("\n=== STEP 4: async/await Scheduling ===");
+  try {
+    const r1 = await scheduleTaskPromise("Fetch config", 300);
+    console.log(`[ASYNC] ${r1}`);
+
+    const r2 = await scheduleTaskPromise("Warm cache", 300);
+    console.log(`[ASYNC] ${r2}`);
+
+    const [r3, r4] = await Promise.all([
+      scheduleTaskPromise("Notify team A", 400),
+      scheduleTaskPromise("Notify team B", 250),
+    ]);
+    console.log(`[ASYNC] ${r3}`);
+    console.log(`[ASYNC] ${r4}`);
+
+    const r5 = await scheduleTaskPromise("Push to production", 300, true);
+    console.log(`[ASYNC] ${r5}`); // never reached
+  } catch (err) {
+    console.error(`[ASYNC] Caught error: ${err.message}`);
+  } finally {
+    console.log("[ASYNC] Scheduler run complete.");
+  }
+}
+
 (async function main() {
   runSynchronousDemo();
   runCallbackDemo();
