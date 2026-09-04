@@ -53,6 +53,17 @@ function runPromiseDemo() {
     .catch((err) => console.error(`[PROMISE] Error: ${err.message}`));
 }
 
+  Promise.all([
+    scheduleTaskPromise("Link code", 300),
+    scheduleTaskPromise("Run unit tests", 600),
+    scheduleTaskPromise("Check types", 200),
+  ])
+    .then((results) => {
+      console.log("[PROMISE] All parallel tasks complete:");
+      results.forEach((r) => console.log(`   - ${r}`));
+    })
+    .catch((err) => console.error(`[PROMISE] Error: ${err.message}`));
+
 (async function main() {
   runSynchronousDemo();
   runCallbackDemo();
