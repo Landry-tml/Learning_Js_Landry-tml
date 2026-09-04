@@ -15,6 +15,19 @@ function scheduleTaskCallback(taskName, delayMs, callback) {
   }, delayMs);
 }
 
+function runCallbackDemo() {
+  console.log("\n=== STEP 2: Callback-based Scheduling ===");
+  scheduleTaskCallback("Send email", 1000, (err, result) => {
+    if (err) return console.error(err);
+    console.log(`[CALLBACK] Result: ${result}`);
+  });
+
+  scheduleTaskCallback("Backup database", 500, (err, result) => {
+    if (err) return console.error(err);
+    console.log(`[CALLBACK] Result: ${result}`);
+  });
+}
+
 (async function main() {
   runSynchronousDemo();
 })();
