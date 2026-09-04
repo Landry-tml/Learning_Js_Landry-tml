@@ -67,4 +67,5 @@ function runPromiseDemo() {
 (async function main() {
   runSynchronousDemo();
   runCallbackDemo();
+  runPromiseDemo;
 })();
