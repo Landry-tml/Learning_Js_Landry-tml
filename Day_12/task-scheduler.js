@@ -7,6 +7,14 @@ function runSynchronousDemo() {
   });
 }
 
+function scheduleTaskCallback(taskName, delayMs, callback) {
+  console.log(`[CALLBACK] Scheduling "${taskName}" to run in ${delayMs}ms`);
+  setTimeout(() => {
+    console.log(`[CALLBACK] Running: ${taskName}`);
+    callback(null, `${taskName} finished`);
+  }, delayMs);
+}
+
 (async function main() {
   runSynchronousDemo();
 })();
