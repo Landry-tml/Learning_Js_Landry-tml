@@ -30,4 +30,5 @@ function runCallbackDemo() {
 
 (async function main() {
   runSynchronousDemo();
+  runCallbackDemo();
 })();
